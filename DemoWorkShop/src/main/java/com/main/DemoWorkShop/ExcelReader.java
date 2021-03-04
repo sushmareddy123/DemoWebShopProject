@@ -26,10 +26,6 @@ public class ExcelReader
 		String sheetName;
 		int sheetNo;
 		static int rows = 0;
-		//int[] dataCount;
-
-		//HashMap<String, Integer> colIndex = new HashMap<String, Integer>();
-
 		public ExcelReader(String workbookName, String sheetName, int sheetNo) {
 			this.workbookName = workbookName;
 			this.sheetName = sheetName;
@@ -61,31 +57,6 @@ public class ExcelReader
 			}
 		}
 
-	/*	public List<String> getRowData(int rowno) {
-			readData();
-			Row row = null;
-			Cell cell = null;
-			List<String> rowData = new ArrayList();
-			// int colNo = 0 ;
-			int noOfRows = sheet.getPhysicalNumberOfRows();
-			System.out.println(noOfRows);
-			for (int i = 0; i < noOfRows; i++) {
-				if (i == rowno) {
-					int noOfColumns = sheet.getRow(0).getPhysicalNumberOfCells();
-					for (int c = 0; c < (noOfColumns - 1); c++) {
-						row = sheet.getRow(i);
-						cell = row.getCell(c);
-
-						rowData.add(cell.toString());
-
-						System.out.println(rowData.get(c));
-					}
-					return rowData;
-				}
-
-			}
-			return rowData;
-		}*/
 
 		public String getColData(String colName, int rowno) {
 
